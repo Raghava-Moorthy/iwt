@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --green:#8cff003b;
+    --greene:#62a70633;
+    --gray:#262a2aa1;
+}
+/* Navbar */
+.navbar{
+    list-style: none;
+    line-height:5;
+    margin-left: 4.2%;
+}
+.header{
+    background: linear-gradient(to bottom,var(--green),#e8e8e8);
+}
+.list{
+    text-decoration: none;
+    margin-left:90%;
+}
+.nav__list{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline;
+    text-transform: capitalize;
+    font-size:18px;
+}
+a:hover,
+a:visited{
+    text-decoration: none !important;
+}
+.b1{
+    background: #e8e8e8;
+}
+/* Home Description */
+.info{
+    margin-left:-3%;
+}
+.quote{
+    font-size: 3.3em;
+    font-weight: bold;
+    color:#0066ff;
+    text-shadow:2px 2px 2px #68e60e;
+
+}
+.drive{
+    font-size: 2em;
+}
+.__message{
+    margin-left:3%;
+    opacity: .83;
+    color:var(--gray);
+    font-size: 1.5em;
+    font-family:poppins;
+}
+.header_desc{
+    margin-top: 5%;
+    margin-left:15%;
+}
