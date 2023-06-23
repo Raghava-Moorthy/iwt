@@ -32,10 +32,12 @@ a:visited{
 }
 .b1{
     background: #e8e8e8;
+    transition: 0.5s;
 }
+
 /* Home Description */
 .info{
-    margin-left:-3%;
+    margin-left:-5%;
 }
 .quote{
     font-size: 3.3em;
@@ -48,13 +50,22 @@ a:visited{
     font-size: 2em;
 }
 .__message{
-    margin-left:3%;
     opacity: .83;
     color:var(--gray);
+    position: absolute;
     font-size: 1.5em;
     font-family:poppins;
 }
 .header_desc{
-    margin-top: 5%;
-    margin-left:15%;
+    margin-top: 10%;
+}
+._img{
+    transform: rotate(-10deg);
+    width:30%;
+    height:50%;
+    margin-top:-13%;
+    margin-left:43%;
+    opacity: 0.9;
+    mix-blend-mode: difference;
+    position: absolute;
 }
