@@ -29,6 +29,16 @@
     color:rgb(1, 111, 36);
     text-shadow: 1px 1px 1px #53ce74 ;
 }
+.nav__list1{
+    margin-left:70%;
+    position: absolute;
+    margin-top:-0.3%;
+}
+.nav__list2{
+    margin-top:-0.3%;
+    margin-left:80%;
+    position: absolute;
+}
 .nav__list{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: inline;
