@@ -4,6 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header .fuel {
+            font-size: 20px;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .header .fuel img {
+            height: 20px;
+            margin-left: 5px;
+        }
+        
+        .navbar {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar li {
+            margin: 0 10px;
+        }
+        
+        .front_pafe {
+            text-align: center;
+            padding: 50px;
+        }
+        
+        .quote {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 30px;
+        }
+        
+        .__message {
+            font-size: 20px;
+            color: #666;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        
+        .home__img img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 30px;
+        }
+        
+        .explore {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .explore:hover {
+            background-color: #555;
+        }
+        
+        .info1 {
+            margin-top: 50px;
+        }
+        
+        .quote span {
+            color: #333;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        
+        .require-list {
+            text-align: left;
+            margin-top: 30px;
+            padding-left: 30px;
+        }
+        
+        .require-list li {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+        
+        .require-list .point1 {
+            color: #e74c3c;
+        }
+        
+        .require-list .point2 {
+            color: #2ecc71;
+        }
+        
+        .require-list .point3 {
+            color: #3498db;
+        }
+        
+        .require-list .point4 {
+            color: #f39c12;
+        }
+        
+        .require-list .point5 {
+            color: #9b59b6;
+        }
+        
+        .require-list .point6 {
+            color: #1abc9c;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .slide-in {
+            animation-name: slideIn;
+            animation-duration: 1s;
+        }
+    </style>
     <link rel="stylesheet" href="../__css/style.css">
     <!-- <script src="../__control/script.js"></script> -->
     <title>FMS</title>
@@ -18,7 +164,7 @@
                 <a href="login.html" class="nav__list signer list col-2">signin</a>
             </ul>
         </div>
-        <div class="container c1 d-flex ">
+        <div class="container c1 d-flex fade-in">
             <div class="header_desc w-75">
                 <div class="info">
                     <p class="quote"><span class="drive">D</span>rive Farther, Spend Smarter</p>
@@ -29,7 +175,7 @@
                         Reduced emissions, cleaner air we breathe, <br>
                         Saving money, a win-win we achieve.</p>
                 </div>
-                <div class="home__img w-50 ">
+                <div class="home__img w-50 slide-in">
                         <img src="../__img/home.png" alt="PUMP" class="_img">
                 </div>
                 <div class="butn">
@@ -70,7 +216,7 @@
                     </div>
                     
                     <div class="password w-100">
-                        <input type="password" required class="word" placeholder="Password">
+                        <input type="password" requiredclass="word" placeholder="Password">
                     </div>
                     
                     <div class="check">
@@ -86,7 +232,7 @@
                
                 </div>
                 <div class="already w-100">
-                    <p class="da">Don't have a account?
+                    <p class="da">Don't have an account?
                         <a href="#" class="account">Signup</a>
                     </p>
                 </div>
@@ -119,7 +265,7 @@
                     </div>
                 </div>
                 <div class="already">
-                    <p class="da">Already have a account?
+                    <p class="da">Already have an account?
                         <a href="#" class="accountl"> Signin</a>
                     </p>
                 </div>
