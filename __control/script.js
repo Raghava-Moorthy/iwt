@@ -18,7 +18,13 @@ function log(){
         c.style.color = "Red";
         c.style.fontSize='16px';
         c.style.paddingLeft='10%';
-
+    }
+    else if(valMail == false){
+        mail.style.border = "2px solid red";
+        c.innerText = "Invalid Email ";
+        c.style.color = "Red";
+        c.style.fontSize='16px';
+        c.style.paddingLeft='10%';
     }
     else{
         mail.style.border="none";
@@ -30,7 +36,6 @@ function log(){
         password.style.border = "2px solid red";
         d.innerText = "Invalid Password";
         d.style.color = "Red";
-
         d.style.fontSize='16px';
         d.style.paddingLeft='10%';
     }
