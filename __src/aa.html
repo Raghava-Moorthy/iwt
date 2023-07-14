@@ -1,304 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-        /* Custom styles */
-        body {
-            background-color: #f5f5f5;
-        }
-        
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .header .fuel {
-            font-size: 20px;
-            margin: 0;
-            flex: 1;
-        }
-        
-        .header .fuel img {
-            height: 20px;
-            margin-left: 5px;
-        }
-        
-        .navbar {
-            list-style-type: none;
-            display: flex;
-            justify-content: flex-end;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .navbar li {
-            margin: 0 10px;
-        }
-        
-        .front_pafe {
-            text-align: center;
-            padding: 50px;
-        }
-        
-        .quote {
-            font-size: 30px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 30px;
-        }
-        
-        .__message {
-            font-size: 20px;
-            color: #666;
-            margin-top: 20px;
-            line-height: 1.5;
-        }
-        
-        .home__img img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 30px;
-        }
-        
-        .explore {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 30px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        .explore:hover {
-            background-color: #555;
-        }
-        
-        .info1 {
-            margin-top: 50px;
-        }
-        
-        .quote span {
-            color: #333;
-            font-weight: bold;
-            font-size: 35px;
-        }
-        
-        .require-list {
-            text-align: left;
-            margin-top: 30px;
-            padding-left: 30px;
-        }
-        
-        .require-list li {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
-            list-style-type: disc;
-        }
-        
-        .require-list .point1 {
-            color: #e74c3c;
-        }
-        
-        .require-list .point2 {
-            color: #2ecc71;
-        }
-        
-        .require-list .point3 {
-            color: #3498db;
-        }
-        
-        .require-list .point4 {
-            color: #f39c12;
-        }
-        
-        .require-list .point5 {
-            color: #9b59b6;
-        }
-        
-        .require-list .point6 {
-            color: #1abc9c;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .fade-in {
-            animation-name: fadeIn;
-            animation-duration: 1s;
-        }
-        
-        @keyframes slideIn {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        .slide-in {
-            animation-name: slideIn;
-            animation-duration: 1s;
-        }
-    </style>
-    <link rel="stylesheet" href="../__css/style.css">
-    <!-- <script src="../__control/script.js"></script> -->
-    <title>FMS</title>
+  <title>Fuel Management System</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body class="b1">
-    <div class="front_pafe">
-        <div class="header">
-            <ul class="navbar row">
-                <p class="fuel __logic w-50">fuelogic
-                    <img src="../__img/drop.png" alt="drop" class="drop"></p>
-                <a href="contact.html" class="nav__list1 cont list col-2">Contact</a>
-                <a href="login.html" class="nav__list signer list col-2">signin</a>
-            </ul>
-        </div>
-        <div class="container c1 d-flex fade-in">
-            <div class="header_desc w-75">
-                <div class="info">
-                    <p class="quote"><span class="drive">D</span>rive Farther, Spend Smarter</p>
-                </div>
-                <div class="short_message w-75">
-                    <p class="__message">Efficient fuel usage benefits us all,<br>
-                        Conserving resources, preventing the fall. <br>
-                        Reduced emissions, cleaner air we breathe, <br>
-                        Saving money, a win-win we achieve.</p>
-                </div>
-                <div class="home__img w-50 slide-in">
-                        <img src="../__img/home.png" alt="PUMP" class="_img">
-                </div>
-                <div class="butn">
-                        <a href="#ff" class="explore">Explore</a>
-                </div>
-            </div>
-        </div>
-        <div class="container c1 d-flex" id="c2">
-            <div class="header_desc w-75">
-                <div class="info1">
-                    <p class="quote"><span class="drive">W</span>hat our Product can Do</p>
-                    <div class="require">
-                        <ol class="require-list __message msg">
-                            <li class="point1">Store your Information and your vehicle </li>
-                            <li class="point2">Approximately calculate the distance of travel with remaining fuel</li>
-                            <li class="point3">Send alert message for remainder</li>
-                            <li class="point4">Also send alert for the nearby fuel station</li>
-                            <li class="point5">Live Tracking</li>
-                            <li class="point6"id="ff">Profile for entering additional vehicle</li>
-                        </ol>
-                        <div class="space"></div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
+<body>
+    <style>
+        #chart-container {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+}
 
+    </style>
+  <h1>Fuel Management System</h1>
 
-    <!-- Login -->
+  <div id="chart-container">
+    <canvas id="fuel-chart"></canvas>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  var fuelData = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [{
+      label: 'Fuel Consumption',
+      backgroundColor: 'rgba(75, 192, 192, 0.5)',
+      borderColor: 'rgba(75, 192, 192, 1)',
+      borderWidth: 1,
+      data: [50, 45, 60, 70, 55, 65]
+    }]
+  };
 
-        <!-- <div class="container justify-content-center align-items-center d-flex cc1">
-            <div class="card">
-                <h2 class="card-header log">Login</h2>
-                <form action="" class="form">
-                    <div class="login w-100">
-                        <input type="text" required class="mail" placeholder="Email or Username">
-                    </div>
-                    
-                    <div class="password w-100">
-                        <input type="password" requiredclass="word" placeholder="Password">
-                    </div>
-                    
-                    <div class="check">
-                        <label for="" class="box">
-                            <a href="#" class="forgot">forgot password?</a>
-                        </label>
-                    </div>
-                    
-                    <div class="btn d-flex">
-                        <div class="lb w-100">
-                            <button class="button lob">Login</button>
-                    </div>
-               
-                </div>
-                <div class="already w-100">
-                    <p class="da">Don't have an account?
-                        <a href="#" class="account">Signup</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div> -->
-   
-    <!-- Register -->
-   
-    <!-- <div class="container justify-content-center align-items-center d-flex cc1 ">
-        
-        <div class="card1">
-            <h2 class="card-header log">Register</h2>
-            <form action="" class="form">
-                
-                <div class="password w-100">
-                    <input type="password" required class="word" placeholder="Username">
-                </div>
-                <div class="login w-100">
-                    <input type="text" required class="mail" placeholder="Email">
-                </div>
-            
-                <div class="password w-100">
-                    <input type="text" required class="word" placeholder="Password">
-                </div>
-                <div class="btn d-flex">
-                    
-                    <div class="lb w-100">
-                        <button class="button lob">Signup</button>
-                    </div>
-                </div>
-                <div class="already">
-                    <p class="da">Already have an account?
-                        <a href="#" class="accountl"> Signin</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div> -->
-    
-    <!-- Forgot Password  -->
-    
-    <!-- <div class="container justify-content-center align-items-center d-flex">
-        
-        <div class="card2">
-            <h2 class="card-header log">Password</h2>
-            <form action="" class="form">
-                
-                <div class="password w-100">
-                    <input type="password" required class="word" placeholder="Password">
-                </div>
-                <div class="password w-100">
-                    <input type="password" required class="word" placeholder="Re-Enter Password">
-                </div>
-                <div class="btn d-flex">
-                    
-                    <div class="lb w-100">
-                        <button class="button lob submit">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-     -->
-    
-    
-    
+  var ctx = document.getElementById('fuel-chart').getContext('2d');
+  var fuelChart = new Chart(ctx, {
+    type: 'bar',
+    data: fuelData,
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+});
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

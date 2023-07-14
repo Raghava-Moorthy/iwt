@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../__css/bootstrap.min.css">
     <link rel="stylesheet" href="../__css/style.css">
-    <!-- <script src="../__control/script.js"></script> -->
+    <script src="../__control/script.js"></script>
     <title>FMS</title>
 </head>
 <body class="b1"> 
-    <div class="container">
-        <div class="card2">
+    <div class="container cc1">
+        <div class="card">
             <h2 class="card-header log">Password</h2>
             <form action="" class="form">
                 
                 <div class="password">
-                    <input type="password"   class="word" placeholder="Password">
+                    <label for="">Password<sup>*</sup></label>
+                    <br>
+                    <input type="password"   class="word" placeholder="Password" id="pass">
+                    <p id="pasError"></p>
                 </div>
                 <div class="password">
-                    <input type="password"   class="word" placeholder="Re-Enter Password">
+                    <label for="">Reenter Password<sup>*</sup></label>
+                    <br>
+                    <input type="password"   class="word" placeholder="Re-Enter Password" id="repas">
+                    <p id="repassError"></p>
                 </div>
                 <div class="but-ton">
-                    <button class="lob">Submit</button>
+                    <button class="lob" type="button" onclick="redirect()">Submit</button>
                 </div>
             </form>
+            <p id="notSame"></p>
         </div>
     </div>
-    
 </body>
 </html>

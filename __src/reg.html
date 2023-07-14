@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../__css/bootstrap.min.css">
     <link rel="stylesheet" href="../__css/style.css">
-    <!-- <script src="../__control/script.js"></script> -->
+    <script src="../__control/script.js"></script>
     <title>FMS</title>
 </head>
-<body class="b1">
+<body class="b1 regBody">
 
-    <div class="container justify-content-center align-items-center d-flex cc1 ">
-        
-        <div class="card1">
+    <div class="container  cc1 cc2">
+        <div class="card ">
             <h2 class="card-header log">Register</h2>
             <form action="" class="form">
                 
                 <div class="password w-100">
-                    <input type="password"  class="word" placeholder="Username">
+                    <label for="">Username<sup>*</sup></label><br>
+                    <input type="text" required  class="word" placeholder="Username" id="uName">
+                    <div id="nameError"></div>
                 </div>
                 <div class="login w-100">
-                    <input type="text"  class="mail" placeholder="Email">
+                    <label for="">Email<sup>*</sup></label><br>
+                    <input type="text" required  class="mail" placeholder="Email" id="signMail">
+                    <div id="mailError" ></div>
                 </div>
             
                 <div class="password w-100">
-                    <input type="text"  class="word" placeholder="Password">
+                    <label for="">Password<sup>*</sup></label><br>
+                    <input type="password" required  class="word" placeholder="Password" id="paswd">
+                    <div id="pasError"></div>
                 </div>
-                <div class="btn d-flex">
+                <div class="d-flex">
                     
                     <div class="lb w-100">
-                        <button class="button lob">Signup</button>
+                        <button class="button lob" type="button" onclick="sign()">Signup</button>
                     </div>
                 </div>
                 <div class="already">
