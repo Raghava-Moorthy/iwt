@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("mousemove", function(e) {
     var x = e.clientX;
     var y = e.clientY;
-    var scrollX = window.scrollX || window.pageXOffset;
-    var scrollY = window.scrollY || window.pageYOffset;
+    var scrollX = window.scrollX ;
+    var scrollY = window.scrollY ;
     cursor.style.left = (x + scrollX+15) + "px";
     cursor.style.top = (y + scrollY+15) + "px";
   });
