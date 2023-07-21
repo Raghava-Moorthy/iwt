@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../__css/bootstrap.min.css`">
     <link rel="stylesheet" href="../__css/style.css">
     <script src="../__control/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -11,33 +11,35 @@
     <title>FMS</title>
 </head>
 <body class="b1">
-      <div class="notification fade" data-dismiss="modal">
-        <p>Registration Successful</p>
-      </div>
-      <div class="container">
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Select Vehicle</h4>
-              </div>
-              <div class="modal-body text-center">
-                <div class="row">
-                  <div class="col-xs-8">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="vehicleType" value="two-Wheeler">
-                        Two Wheeler
-                      </label>
-                    </div>
+  <div class="container">
+
+    <!-- <div class="notification fade" data-dismiss="modal">
+      <p>Registration Successful</p>
+    </div>
+    <div class="container">
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Select Vehicle</h4>
+            </div>
+            <div class="modal-body text-center">
+              <div class="row">
+                <div class="col-xs-7  ">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="vehicleType" value="two-Wheeler">
+                      Bikes
+                    </label>
                   </div>
-                  <div class="col-xs-8">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="vehicleType" value="three-Wheeler">
-                        Three Wheeler
-                      </label>
+                </div>
+                <div class="col-xs-7">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="vehicleType" value="three-Wheeler">
+                      Cars 
+                    </label>
                     </div>
                   </div>
                 </div>
@@ -59,58 +61,92 @@
             </div>
           </div>
         </div>
+      </div> -->
+      
+      
+      <!-- Bikes-->
+      <div class="Two__Wheeler">
+        <label for="TwoWheeler">Select Vehicle CC value <sup>*</sup></label>
+        <select name="Two_wheeler" id="twoWheel">
+          <option value="1">100 CC - 150 CC</option>
+          <option value="2">150 CC- 300 CC</option>
+          <option value="3">300 CC - 500 CC</option>
+          <option value="4">500 CC & Above</option>
+        </select>
       </div>
       
+      <!-- Cars -->
+      <div class="Cars">
+        <label for="car">Select Vehicle CC value<sup>*</sup></label>
+        <select name="Four_wheeler" id="cars">
+          <option value="1">800 CC - 1600 CC</option>
+          <option value="2">1600 CC- 2000 CC</option>
+          <option value="3">1600 CC - 2500 CC</option>
+          <option value="4">2500 CC - 3000 CC</option>
+          <option value="4">3000 CC & Above</option>
+        </select>
+      </div>
       
-
-
-    <!-- <select name="" id="">
-        <option value="0">Vehicle CC</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-    </select>
-    <select name="" id="">
-        <option value="0">Fuel Type</option>
-        <option value="">Petrol</option>
-        <option value="">Diesel</option>
-        <option value="">CNG</option>
-    </select>
-
-    <!- confidentioal --
-    <select name="" id="">
-        <option value="">fuel injecion</option>
-        <option value="">Load/unload</option>
-        <option value="">torque</option>
-        <option value=""></option>
-    </select>
-
-
-
-
-
-
-
-
-
-
-
-    <br>
-    <br>
-    <br>
-    <input type="text" name="" id="" placeholder="Tank Capacity">
-    <br>
-    <br>
-    <br>
-    <input type="text" name="" id="" placeholder="Fuel Remains"> -->
-
-    <script>
-        $(document).ready(function(){
-            $("#myModal").modal('show');
-        });
-    </script>
+      <!-- Truck -->
+      <div class="Truck">
+        <label for="truck">Select Vehicle CC value<sup>*</sup></label>
+        <select name="Truck" id="lorry">
+          <option value="1">1000 CC - 3000 CC</option>
+          <option value="2">3000 CC- 8000 CC</option>
+          <option value="3">8000 CC & Above</option>
+        </select>
+      </div>
+      
+      <!-- Fuel Cars and Truck -->
+      <div class="comFuel">
+        <label for="common_fuel">Select Fuel Type<sup>*</sup></label>
+        <select name="com_fuel" id="com__fuel">
+          <option value="1">Petrol</option>
+          <option value="2">Diesel</option>
+        </select>
+      </div>
+      
+      <!-- Fuel Injection -->
+      <label for="Injection">Dowes Your vehicle have fuel injection<sup>*</sup></label>
+      
+      <div class="row">
+        <div class="col-xs-2">
+          <div class="radio">
+            <label>
+              <input type="radio" name="vehicleType" value="truck-Wheeler">
+              Yes
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="radio">
+            <label>
+              <input type="radio" name="vehicleType" value="truck-Wheeler">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      
+        <label for="Capacity">
+          Enter Your Fuel Tank Capacity<sup>*</sup>
+          <input type="text" name="tank" id="tank_cap">
+        </label>
+        <label for="remains">
+          Enter remaining fuel amount<sup>*</sup>
+          <input type="text" name="amt" id="amount">
+        </label>
+        <label for="Mileage">
+          Enter Milegage of your vehicle per Kilometer<sup>*</sup>
+          <input type="text" name="mile" id="mileage">
+        </label>
+        
+  </div>
+          
+  <script>
+    $(document).ready(function(){
+      $("#myModal").modal('show');
+    });
+  </script>
 </body>
 </html>

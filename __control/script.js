@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+  var cursor = document.getElementById("bubles");
+
+  document.addEventListener("mousemove", function(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+  });
+});
+
+
 function isPasswordValid(password) {
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W)(?!.*\s).{6,}$/;
     return passwordRegex.test(password);
@@ -47,30 +60,35 @@ function sign(){
     var name = document.getElementById("uName");
     var mail = document.getElementById("signMail");
     var password = document.getElementById("paswd");
-
     var c = document.getElementById("mailError");
     var d = document.getElementById("pasError");
     var e = document.getElementById("nameError");
     var valMail = isEmailValid(mail.value);
-    if(name.value==""){
+    if(name.value===""){
         name.style.border = "2px solid red";
         e.innerText = "Enter Username ";
         e.style.fontSize='16px';
         e.style.color = "Red";
-
         e.style.paddingLeft='10%';
+    }
+    else if(name.value.length<6){
+      name.style.border = "2px solid red";
+      e.innerText = "Minimum Username length is 6 ";
+      e.style.fontSize='16px';
+      e.style.color = "Red";
+      e.style.paddingLeft='10%';
     }
     else{
         name.style.border="none";
         name.style.borderBottom="2px solid #000";
         e.innerText="";
     }
-    if(mail.value=="" || valMail===0){
+    
+    if(mail.value=="" || valMail==false){
         mail.style.border = "2px solid red";
         c.innerText = "Enter Email ";
         c.style.fontSize='16px';
         c.style.color = "Red";
-
         c.style.paddingLeft='10%';
     }
     else{
@@ -78,6 +96,7 @@ function sign(){
         mail.style.borderBottom = "2px solid #000";
         c.innerText="";
     }
+    
     var valid = isPasswordValid(password.value);
     if(valid == false){
         password.style.border = "2px solid red";
@@ -85,9 +104,7 @@ function sign(){
         d.style.fontSize='16px';
         d.style.color = "Red";
     }
-    else 
-        window.open("../__src/personal.html","_self");
-
+    else window.open("../__src/personal.html","_self");
 };
 
 function redirect() {
@@ -101,7 +118,6 @@ function redirect() {
     if (a.value === "") {
       a.style.border = "2px solid red";
       c.style.color = "Red";
-
       c.innerText = "Invalid Password";
       c.style.fontSize = "16px";
       c.style.paddingLeft = "10%";
@@ -110,7 +126,6 @@ function redirect() {
       a.style.border = "2px solid red";
       c.innerText = "Invalid Password";
       c.style.color = "Red";
-
       c.style.fontSize = "16px";
       c.style.paddingLeft = "10%";
     }
@@ -124,29 +139,29 @@ function redirect() {
       d.innerText = "Invalid Password";
       d.style.fontSize = "16px";
       d.style.color = "Red";
-
       d.style.paddingLeft = "10%";
-    } else if (val2 === false) {
+    } 
+    else if (val2 === false) {
       b.style.border = "2px solid red";
       d.innerText = "Invalid Password";
       d.style.color = "Red";
-
       d.style.fontSize = "16px";
       d.style.paddingLeft = "10%";
-    } else {
+    } 
+    else {
       b.style.border = "none";
       b.style.borderBottom = "2px solid #000";
       d.innerText = "";
     }
     if (val1 && val2 && a.value === b.value) {
       window.open("login.html", "_self");
-    } else if(val1 == val2 && a.value!=b.value) {
+    } 
+    else if(val1 == val2 && a.value!=b.value) {
       e.innerText = "Passwords are different";
       e.style.fontSize = "25px";
       e.style.paddingLeft = "20%";
       a.style.border = "2px solid red";
       e.style.color = "Red";
-
       b.style.border = "2px solid red";
     }
   }
