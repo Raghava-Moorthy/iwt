@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var x = e.clientX;
     var y = e.clientY;
 
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
+    cursor.style.left = (x+15) + "px";
+    cursor.style.top = (y+15) + "px";
   });
 });
 

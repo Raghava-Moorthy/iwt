@@ -104,7 +104,7 @@ a:visited{
     border-radius: 50%;
     position: absolute;
     border:3px solid rgb(0, 255, 251);
-    filter:drop-shadow(2px 2px 3px #fff);
+    filter:drop-shadow(1px 1px 10px #fff);
     animation: bigSmall 2.5s linear infinite forwards;
 }
 @keyframes bigSmall{
@@ -115,7 +115,6 @@ a:visited{
     100%{
         width:25px;
         height:25px;
-
     }
 }
 
