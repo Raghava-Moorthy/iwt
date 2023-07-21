@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("mousemove", function(e) {
     var x = e.clientX;
     var y = e.clientY;
-
-    cursor.style.left = (x+15) + "px";
-    cursor.style.top = (y+15) + "px";
+    var scrollX = window.scrollX || window.pageXOffset;
+    var scrollY = window.scrollY || window.pageYOffset;
+    cursor.style.left = (x + scrollX+15) + "px";
+    cursor.style.top = (y + scrollY+15) + "px";
   });
 });
 
