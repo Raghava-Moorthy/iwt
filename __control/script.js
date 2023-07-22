@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     cursor.style.top = (y + scrollY+15) + "px";
   });
 });
-
-
 function isPasswordValid(password) {
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W)(?!.*\s).{6,}$/;
     return passwordRegex.test(password);

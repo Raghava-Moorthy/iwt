@@ -5,66 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../__css/bootstrap.min.css">
     <link rel="stylesheet" href="../__css/style.css">
+    <script src="../__control/angluar.js"></script>
     <script src="../__control/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>FMS</title>
 </head>
-<body class="b1">
-  <div class="container">
+<body class="b1" ng-app = "Personal">
+  <div class="total__controller"ng-controller = "control">
 
-    
-    <!-- 
-      <div class="container">
+    <div class="container-modal">
       <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Select Vehicle</h4>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Select Vehicle</h4>
+          </div>
+          <div class="modal-body text-center">
+            <div class="row">
+              <div class="col-xs-7  ">
+                <div class="radio">
+                  <label><input type="radio" name="vehicleType" ng-model="vehicleType" value="two-Wheeler">Bikes</label>
+                </div>
+              </div>
+              <div class="col-xs-7">
+                <div class="radio">
+                  <label><input type="radio" name="vehicleType" value="three-Wheeler">Cars</label>
+                </div>
+              </div>
             </div>
-            <div class="modal-body text-center">
-              <div class="row">
-                <div class="col-xs-7  ">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="vehicleType" value="two-Wheeler">
-                      Bikes
-                    </label>
-                  </div>
-                </div>
-                <div class="col-xs-7">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="vehicleType" value="three-Wheeler">
-                      Cars 
-                    </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-7">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="vehicleType" value="truck-Wheeler">
-                        Truck
-                      </label>
-                    </div>
-                  </div>
-                  
+            <div class="row">
+              <div class="col-xs-7">
+                <div class="radio">
+                  <label><input type="radio" name="vehicleType" value="truck-Wheeler">Truck</label>
                 </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-              </div>
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
             </div>
           </div>
         </div>
       </div>
-       -->
-      
+    </div>
+    
+    <div class="container" id = "vehicle_sections">   
       <!-- Bikes-->
-      <div class="Two__Wheeler">
+      <div class="Two__Wheeler" ng-show = "vehicleType === 'two-Wheeler'">
         <label for="TwoWheeler">Select Vehicle CC value <sup>*</sup></label>
         <select name="Two_wheeler" id="twoWheel">
           <option value="1">100 CC - 150 CC</option>
@@ -75,7 +65,7 @@
       </div>
       
       <!-- Cars -->
-      <div class="Cars">
+      <div class="Cars" ng-hide="vehicleType==='two-Wheeler">
         <label for="car">Select Vehicle CC value<sup>*</sup></label>
         <select name="Four_wheeler" id="cars">
           <option value="1">800 CC - 1600 CC</option>
@@ -87,7 +77,7 @@
       </div>
       
       <!-- Truck -->
-      <div class="Truck">
+      <div class="Truck" ng-hide="vehicleType==='two-Wheeler">
         <label for="truck">Select Vehicle CC value<sup>*</sup></label>
         <select name="Truck" id="lorry">
           <option value="1">1000 CC - 3000 CC</option>
@@ -107,7 +97,6 @@
       
       <!-- Fuel Injection -->
       <label for="Injection">Dowes Your vehicle have fuel injection<sup>*</sup></label>
-      
       <div class="row">
         <div class="col-xs-2">
           <div class="radio">
@@ -127,21 +116,21 @@
         </div>
       </div>
       
-        <label for="Capacity">
-          Enter Your Fuel Tank Capacity<sup>*</sup>
-          <input type="text" name="tank" id="tank_cap">
-        </label>
-        <label for="remains">
-          Enter remaining fuel amount<sup>*</sup>
-          <input type="text" name="amt" id="amount">
-        </label>
-        <label for="Mileage">
-          Enter Milegage of your vehicle per Kilometer<sup>*</sup>
-          <input type="text" name="mile" id="mileage">
-        </label>
-        
+      <label for="Capacity">
+        Enter Your Fuel Tank Capacity<sup>*</sup>
+        <input type="text" name="tank" id="tank_cap">
+      </label>
+      <label for="remains">
+        Enter remaining fuel amount<sup>*</sup>
+        <input type="text" name="amt" id="amount">
+      </label>
+      <label for="Mileage">
+        Enter Milegage of your vehicle per Kilometer<sup>*</sup>
+        <input type="text" name="mile" id="mileage">
+      </label>
+    </div>
   </div>
-          
+    
   <script>
     $(document).ready(function(){
       $("#myModal").modal('show');
