@@ -12,10 +12,6 @@
 
   <button ng-click="toggleParagraph()">Toggle Items</button>
 
-  <div ng-if="isDisplayed">
-    <p></p>
-  </div>
-
   <ul>
     <li ng-show="showParagraph" ng-repeat="item in items">
         {{ item.name }}
