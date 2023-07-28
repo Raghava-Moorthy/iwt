@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Excercise4</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="MyController">
+  <h1>{{ title }}</h1>
+
+  <p >You can show/hide all the below list</p>
+
+  <button ng-click="toggleParagraph()">Toggle Items</button>
+
+  <div ng-if="isDisplayed">
+    <p></p>
+  </div>
+
+  <ul>
+    <li ng-show="showParagraph" ng-repeat="item in items">
+        {{ item.name }}
+    </li>
+  </ul>
+
+  <p>Filter list:
+    <input type="text" ng-model="filterValue">
+  </p>
+  <ul>
+    <details ng-repeat="item in items | filter: filterValue">
+      <summary>{{ item.name }}</summary>
+      <br>
+      <p>{{ item.description }}</p>
+      <br>
+    </details>
+  </ul>
+  <script>
+    var myApp = angular.module('myApp', []);
+
+myApp.controller('MyController', function($scope) {
+  $scope.title = 'Vehicle types with AngularJs';
+
+  $scope.showParagraph = true;
+
+  $scope.toggleParagraph = function() {
+    $scope.showParagraph = !$scope.showParagraph;
+  };
+
+  $scope.isDisplayed = true;
+
+  $scope.items = [
+        {
+          name: 'Two-Wheeler',
+          description: 'CC ranges from 100-900'
+        },
+        {
+          name: 'Three-Wheeler',
+          description: 'CC ranges from 200-600'
+        },
+        {
+          name: 'Four-Wheeler',
+          description: 'CC ranges from 700-3600'
+        },
+        {
+          name: 'Truck',
+          description: 'CC ranges from 1000-11000'
+        }
+      ];
+
+});
+
+  </script>
+</body>
+</html>

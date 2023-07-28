@@ -11,8 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>FMS</title>
 </head>
-<body class="b1" ng-app = "Personal">
-  <div class="total__controller"ng-controller = "control">
+<body class="b1">
+  <div class="total__controller">
 
     <div class="container-modal">
       <div class="modal fade" id="myModal" role="dialog">
@@ -54,7 +54,7 @@
     
     <div class="container" id = "vehicle_sections">   
       <!-- Bikes-->
-      <div class="Two__Wheeler" ng-show = "vehicleType === 'two-Wheeler'">
+      <div class="Two__Wheeler">
         <label for="TwoWheeler">Select Vehicle CC value <sup>*</sup></label>
         <select name="Two_wheeler" id="twoWheel">
           <option value="1">100 CC - 150 CC</option>
@@ -65,7 +65,7 @@
       </div>
       
       <!-- Cars -->
-      <div class="Cars" ng-hide="vehicleType==='two-Wheeler">
+      <div class="Cars" >
         <label for="car">Select Vehicle CC value<sup>*</sup></label>
         <select name="Four_wheeler" id="cars">
           <option value="1">800 CC - 1600 CC</option>
@@ -77,7 +77,7 @@
       </div>
       
       <!-- Truck -->
-      <div class="Truck" ng-hide="vehicleType==='two-Wheeler">
+      <div class="Truck">
         <label for="truck">Select Vehicle CC value<sup>*</sup></label>
         <select name="Truck" id="lorry">
           <option value="1">1000 CC - 3000 CC</option>

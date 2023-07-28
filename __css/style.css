@@ -39,7 +39,7 @@ label{
 }
 .header{
     transition: 0.5s;
-    /* background: linear-gradient(to bottom,var(--green),#ffffff); */
+    background: linear-gradient(to bottom,var(--green),#ffffff);
     
 }
 .list{
@@ -500,7 +500,6 @@ input{
     }
 
 }
- 
 @media screen and (max-width:650px) {
     .da{
         font-size: 12px;

@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
     cursor.style.top = (y + scrollY+15) + "px";
   });
 });
-function isPasswordValid(password) {
-    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W)(?!.*\s).{6,}$/;
-    return passwordRegex.test(password);
+isPasswordValid = (password) => {
+  const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W)(?!.*\s).{6,}$/;
+  return passwordRegex.test(password);
 }
-function isEmailValid(mail) {
+isEmailValid = (mail) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(mail);
 }  
-function log(){
+log = () => {
     var mail = document.getElementById("mail");
     var password = document.getElementById("pswd");
     var c = document.getElementById("emilerror");
@@ -54,8 +54,7 @@ function log(){
     else
         window.open("../__src/apply.html","_self");
 };
-
-function sign(){
+sign = () =>{
     var name = document.getElementById("uName");
     var mail = document.getElementById("signMail");
     var password = document.getElementById("paswd");
@@ -106,7 +105,7 @@ function sign(){
     else window.open("../__src/personal.html","_self");
 };
 
-function redirect() {
+redirect= () => {
     var a = document.getElementById("pass");
     var b = document.getElementById("repas");
     var c = document.getElementById("pasError");
@@ -156,7 +155,8 @@ function redirect() {
       window.open("login.html", "_self");
     } 
     else if(val1 == val2 && a.value!=b.value) {
-      e.innerText = "Passwords are different";
+      alert("Passwords are different")
+      e.innerText = "Enter Same Password Twice";
       e.style.fontSize = "25px";
       e.style.paddingLeft = "20%";
       a.style.border = "2px solid red";
